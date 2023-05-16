@@ -1,0 +1,19 @@
+def Fibonacci(n):
+    assert n>=0 and int(n)==n, "The fibonacci number should be positive integer"
+    if n in [0,1]:
+        return n
+    else:
+        return Fibonacci(n-1)+ Fibonacci(n-2)
+
+
+print(Fibonacci(5))
+=============================
+def fibonacci(n):
+    if(n <= 1):
+        return n
+    else:
+        return(fibonacci(n-1) + fibonacci(n-2))
+n = int(input("Enter number of terms:"))
+print("Fibonacci sequence:")
+for i in range(n):
+    print(fibonacci(i))

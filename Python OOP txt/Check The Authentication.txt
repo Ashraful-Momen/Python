@@ -1,0 +1,28 @@
+#OOP Object and class for Password Authentication:
+
+class A:
+  
+    __Welcome="Welcome Our Hacking Course "
+
+    def __SetValue(self,name,password):
+       self.name=name
+       self.password=password
+    def __Authentication(self,u_name,password):
+        self.name=u_name
+        self.password=password
+        if u_name == "Shuvo" and password == "123" :
+            print("Welcome Our Admin")
+        else:
+            print("Your User Name and Password is incorrect!")
+        
+    def __init__(self):
+        self.name=input("Enter Your Name plz: ")
+        print(self.__Welcome+self.name)
+        name = input ("Enter Your User Name: ")
+        password = input("Enter Your Password: ")
+        print(f"Your Name : {name} , passoword: {password}")
+        self.__Authentication(name,password)
+
+        
+        
+obj = A()

@@ -1,0 +1,65 @@
+from array import * 
+arrayA=array("i",[1,2,3])
+arrayD=array("d",[1.3,1.4,1.6])
+
+print(arrayD)
+
+print(arrayA)
+
+arrayA.insert(6,7) # insert(index,value)
+arrayA.insert(0,0)# The time complexity is : o(n) for move all index after add another element
+print(arrayA)
+===================================================
+#Traverse Array: # T.C> 0(n)
+def traverseArray(array):
+    for i in array: 
+        print(i)
+
+traverseArray(arrayD)
+==================================================
+from array import *
+#Access the array elements and the time complexity is 0(1)
+array1=array("i",[1,2,3])
+print(array1[1])
+
+def AccessElement(array,index):
+    if index>= len(array):
+        print("Array index over range")
+    else:
+        print(array[index])
+AccessElement(array1,1)
+
+=================================================
+#Searching/Finding the array element in Array :time complexity is ==> 0(n) and the space complexity is : 0(1) cz not need the extra space !!!
+from array import *
+
+array1=array("i",[1,2,3,4])
+
+print(array1)
+def SearchElement(array,value):
+    for i in array:
+        if i == value:
+            return array.index(value)
+    return "nothing is found"  # i got indentation error : for to return have to be same level 
+
+print(SearchElement(array1,2))
+
+
+# ===================================
+# def SearchElement(array,value):
+#     for i in array:
+#         if i == value:
+#             return print(f"Find the element {value} at the index of : {array.index(i)} ")
+#     return print("nothing is found")
+# SearchElement(array1,5)
+
+=====================================================
+#Deletetion of array 
+
+from array import *
+#The time complexity is 0(n) and the space complexity is : 0(1)
+array1=array ("i",[1,2,3,4,5,6])
+array1.remove(5)
+
+print(array1)
+=====================================================

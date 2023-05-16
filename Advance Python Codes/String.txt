@@ -1,0 +1,102 @@
+#python string: ordered , immutable , represantaion
+
+
+var = "Md.Ashraful Momen"
+var1 = "I'm Here and she\'ve a looking at me "
+var3 = """What about you \
+Buddy""" # after use \ line not print any new line
+print(var3)
+print(var1)
+print(var)
+#==============================
+
+var4 = "Hello"
+print(var4)
+
+char = var4[0]
+print(char)
+
+# var4[0]= "h"
+# print(var4[0])   string is immutable : can't change after declear!!!
+#==================
+#=======================
+var = "Hello Bangladesh"
+print(var[1:5:2])
+print(var[::-1])
+#==================
+gretting = "Hello"
+name = "shuvo" 
+sentence = gretting + " " + name
+print(sentence)
+# iterate:
+for i in gretting:
+    print(i)
+if "r" in gretting:
+    print("yes")
+else:
+    print("no \"e\" in exit")
+#===========================
+from timeit import default_timer as timer
+
+
+my_string = "    Hello world"
+new = my_string.strip() #removing the extra string use the strap() Function
+print(new)
+
+print(new.upper())
+print(new.lower())
+print(new.startswith('Hello'))
+print(new.startswith("World"))
+print(new.endswith("world"))
+print(new.find("o")) #Return the index value: 
+print(new.count("e")) # Total latter in world
+print(new.replace("world","Universe"))
+
+word = new.split()
+print(word)
+var = "What,are,you,doing "
+var_space = "Human to err"
+print(var_space.split())
+var = var.split(",")
+print(var)
+#=====================
+check = "What,are,you,checking"
+check = check.split(",")
+print(check)
+var =''.join(check) #join the string with no space
+var2 = " ".join(check) #join the string with space 
+print(var)
+print(var2)
+#==============================
+start = timer()
+my_list =['a'] * 100
+print(my_list)
+my_join = ""
+my_join= "".join(my_list)
+stop = timer()
+print(my_join)
+print(stop-start)
+=================================
+# formatting string
+var = "Momen"
+value = 3
+string = "My name is : %s" % var
+print(string)
+#=============================
+sentence = " My Value is : %d" % value # as like we print: float,double, integer, etc number!
+print(sentence)
+
+value_float = 3.1416
+
+sentence = "My float value is : %.2f" % value_float
+print(sentence)
+#===================================
+pi = 3.1416
+sentence = " The Pi value is : {:.2f}".format(pi)
+print(sentence)
+gravity = 9.81
+sentence = " The gravity {} and the Pi is : {}".format(gravity,pi)
+print(sentence)
+
+sentence2 = f" The gravity {gravity} and the PI is : {pi}" #Tow formatting technique is almost same !
+print(sentence2)

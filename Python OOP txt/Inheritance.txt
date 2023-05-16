@@ -1,0 +1,16 @@
+#Inheritence Practise:
+class A:
+    def display1(self):
+        print("I am A class")
+class B(A):
+    def display2(self):
+        print("I am A class")
+class C(B):
+    def display3(self):
+        print("I am A class")
+class W(C , B, A):
+    def display(self):
+        print("I am for checking Inheritance !")
+    
+object = W()
+object.display1()

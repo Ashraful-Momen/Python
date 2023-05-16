@@ -1,0 +1,10 @@
+import sys
+sys.setrecursionlimit(10000)    # Increase the recursion limit in stack memory
+def fact(n):
+    assert n>=0 and int(n)==n , "The number should be positive integer"
+    if n in [0,1]:
+        return 1
+    else:
+        return n*(fact(n-1))
+
+print(fact(-1.54))

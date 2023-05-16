@@ -1,0 +1,6 @@
+print(30<20)
+print(30>20)
+print(30<=40)
+print(30>=20)
+print("Ashraful"=="Ashraful")
+print("shuvo"!=40)

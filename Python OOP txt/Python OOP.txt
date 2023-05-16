@@ -1,0 +1,72 @@
+
+
+
+class A:
+    a= 10
+    def showvalue(self):
+        self.c = self.a * self.a
+        print(self.c)
+    def add(self,a,b):
+        print(a+b)
+
+        
+obj = A()
+obj.showvalue()
+obj.add(2,3)
+===============================================
+
+class Student:
+
+    def set_value(self,name,roll):
+        self.name=name
+        self.roll=roll
+    def display(self):
+        return print(f"Name : {self.name} and Roll: {self.roll}")
+    
+obj = Student()
+obj.set_value("Ashraful", 201811050038)
+obj.display()
+===============================================
+#Encapsulation : getter and setter ===>
+class A:
+    __name="Shvuo"
+
+    def __display(self):
+        print("Welcome Bangladesh")
+        
+
+    def __init__(self):
+         print(self.__name)
+         print(self.__display())
+    
+obj = A()
+===============================================
+#Function overwrite : next function will be print
+#Polymorephism : function overwrite+ function overloadian(differt perameter with different value)
+class A:
+    def display(slef):
+        print("Hi")
+class B(A):
+    def display(self):
+        super().display()
+        print("Bye")
+
+obj = B()
+obj.display()
+===============================================
+class Area:
+    def find_area(self, a=None, b=None):
+
+        if a!=None and b!=None:
+            print("The Area is : ",a*b)
+        elif a!=None: 
+            print("The Area is : ",a*a)
+
+        else:
+            print("Not Found the parameter")
+        
+obj = Area()
+obj.find_area()
+obj.find_area(3)
+obj.find_area(2,3)
+===============================================
